@@ -8,6 +8,7 @@ References:
 
 import re
 from collections import Counter
+from datetime import datetime
 
 import altair as alt
 import pandas as pd
@@ -62,6 +63,7 @@ with st.form('survey_form'):
             conn = st.connection('gsheets', type=GSheetsConnection)
             df = conn.read(worksheet='Responses')
             df.loc[len(df.index)] = [
+                datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 responses['name'],
                 len(answers),
                 cat_counts['Pitta'],
