@@ -63,7 +63,7 @@ with st.form('survey_form'):
             conn = st.connection('gsheets', type=GSheetsConnection)
             df = conn.read(worksheet='Responses')
             df.loc[len(df.index)] = [
-                datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                 responses['name'],
                 len(answers),
                 cat_counts['Pitta'],
@@ -74,7 +74,7 @@ with st.form('survey_form'):
             conn.update(worksheet='Responses', data=df)
             st.cache_data.clear()
 
-            st.success(f'Thanks {responses["name"]} for completing the survey!')
+            st.success(f'Thanks "{responses["name"]}" for completing the survey!')
             st.write(f'You answered {len(answers)} out of 29 questions')
             st.write(cat_counts)
 
