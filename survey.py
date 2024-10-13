@@ -36,7 +36,9 @@ with st.form('survey_form'):
     for ix, ques in enumerate(questions['questions'], start=1):
         ques_label, options = ques.popitem()
         answer_keys[ix] = options = {v: k for k, v in options.items() if v is not None}
-        responses['answers'][ix] = st.radio(f'{ix}.) {ques_label}', options.keys(), index=None)
+        responses['answers'][ix] = st.radio(
+            f'{ix}.) {ques_label}', options.keys(), index=None
+        )
 
     def disable_button():
         st.session_state.submitted = True
