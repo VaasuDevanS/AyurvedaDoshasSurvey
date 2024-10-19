@@ -1,7 +1,7 @@
 """
 Author: Vaasudevan Srinivsan <vaasuceg.96@gmail.com>
 Created: Oct 10, 2024
-Modified: Oct 13, 2024
+Modified: Oct 19, 2024
 References:
     - https://docs.streamlit.io/develop/tutorials/databases/private-gsheet
 """
@@ -27,6 +27,7 @@ st.image('header.jpg')
 with st.form('survey_form'):
     with open('questions.yml', 'r') as file:
         questions = yaml.safe_load(file)
+        total_ques = len(questions['questions'])
 
     responses = {
         'name': st.text_input('Name:red[*]', placeholder='Enter your name'),
@@ -83,7 +84,7 @@ with st.form('survey_form'):
             st.cache_data.clear()
 
             st.success(f'Thanks "{responses["name"]}" for completing the survey!')
-            st.write(f'You answered {len(categories)} out of 29 questions')
+            st.write(f'You answered {len(categories)} out of {total_ques} questions')
             st.write(cat_counts)
 
             cat_counts_df = pd.DataFrame(
