@@ -1,8 +1,8 @@
 questions:
   - Which of these best describes your physical frame?:
-      Pitta: Do you have a medium build with moderate muscle development? 
+      Pitta: Do you have a medium build with moderate muscle development?
       Vata: is your body frame thin or light with a tendency to lose weight easily?
-      Kapha: Do you have a heavier build, with a tendency to gain weight easily? 
+      Kapha: Do you have a heavier build, with a tendency to gain weight easily?
   - Which best describes your skin?:
       Pitta: Oily and soft with freckles or pimples or sensitive,prone to redness?
       Vata: Is your skin dry, rough, or prone to cracking?
@@ -41,9 +41,9 @@ questions:
       Kapha: I’m a loyal, faithful friend
   - And these? Which sounds the most like you?:
       Pitta: I can be irritable, impatient prone to anger
-      Vata: I’m often restless easily excitable, prone to anxiety 
+      Vata: I’m often restless easily excitable, prone to anxiety
       Kapha: I’m resistant to change or clingy
-    - Develop rashes or hives?:
+  - Develop rashes or hives?:
       Pitta: "Yes"
       Vata:
       Kapha:
@@ -59,7 +59,7 @@ questions:
       Pitta: "Yes"
       Vata:
       Kapha:
-    - Retain water?:
+  - Retain water?:
       Pitta:
       Vata:
       Kapha: "Yes"
@@ -83,11 +83,11 @@ questions:
       Pitta: "Yes"
       Vata:
       Kapha:
-    - What are your sleep patterns?:
-      Pitta: Do you sleep well but prefer cooler environments when resting? 
-      Vata: Do you have trouble falling asleep or wake up frequently during the night? 
+  - What are your sleep patterns?:
+      Pitta: Do you sleep well but prefer cooler environments when resting?
+      Vata: Do you have trouble falling asleep or wake up frequently during the night?
       Kapha: Do you sleep heavily and for long hours, sometimes finding it hard to wake up?
-       - How are your bowel movements?:
+  - How are your bowel movements?:
       Pitta: Do you tend to have regular, loose, or frequent bowel movements, sometimes with a burning sensation?
-      Vata: Do you often have irregular bowel movements, such as constipation or gas? 
+      Vata: Do you often have irregular bowel movements, such as constipation or gas?
       Kapha: Do you have slow, regular bowel movements, sometimes experiencing heaviness or sluggishness?
