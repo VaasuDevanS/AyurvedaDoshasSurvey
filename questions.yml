@@ -1,28 +1,28 @@
 questions:
   - Which of these best describes your physical frame?:
-      Pitta: Medium
-      Vata: Small
-      Kapha: Large
+      Pitta: Do you have a medium build with moderate muscle development? 
+      Vata: is your body frame thin or light with a tendency to lose weight easily?
+      Kapha: Do you have a heavier build, with a tendency to gain weight easily? 
   - Which best describes your skin?:
-      Pitta: Oily and soft with freckles or pimples
-      Vata: Dry
-      Kapha: Thick, oily, cool skin
+      Pitta: Oily and soft with freckles or pimples or sensitive,prone to redness?
+      Vata: Is your skin dry, rough, or prone to cracking?
+      Kapha: Thick, oily, smooth, cool skin?
   - Which best describes your hair?:
-      Pitta: Straight and fine
-      Vata: Dry and curly
+      Pitta: Straight and fine, graying or thinning of hair
+      Vata: Dry, brittle and curly
       Kapha: Thick and lustrous
   - Which best describes your eyes?:
       Pitta: Medium-sized; intense gaze
       Vata: Small and dry
       Kapha: Large, pretty
   - Which best describes how you talk?:
-      Pitta: My words are sharp and concise
-      Vata: Fast and/or a lot!
-      Kapha: My speech is slow and calm
+      Pitta: Do you speak clearly in a concise way and assertively, sometimes with a sharp or direct tone?
+      Vata: Fast and/or a lot! Jumping topics.
+      Kapha: My speech is slow, calm and thoughtful
   - What type of weather is your favorite?:
-      Pitta: Cool and dry
-      Vata: Warm
-      Kapha: Cool
+      Pitta: Do you dislike hot weather Do you often feel hot or sweaty, even in mild weather  and prefer cooler temperatures?
+      Vata: Cool, dry weather do you prefer warmth? Do you often feel cold, especially in your hands and feet, regardless of the weather?
+      Kapha: Do you dislike cold rainy and damp weather and feel cold easily in such weather? but enjoy warmth and sunshine?
   - How is your memory?:
       Pitta: I have a great memory!
       Vata: I learn quickly, but I also forget quickly
@@ -40,13 +40,9 @@ questions:
       Vata: I’m very intuitive
       Kapha: I’m a loyal, faithful friend
   - And these? Which sounds the most like you?:
-      Pitta: I can be irritable and impatient
-      Vata: I’m often restless
-      Kapha: I’m a loyal, faithful friend
-  - Experience insomnia?:
-      Pitta:
-      Vata: "Yes"
-      Kapha:
+      Pitta: I can be irritable, impatient prone to anger
+      Vata: I’m often restless easily excitable, prone to anxiety 
+      Kapha: I’m resistant to change or clingy
   - Feel complacent?:
       Pitta:
       Vata:
@@ -54,10 +50,6 @@ questions:
   - Develop rashes or hives?:
       Pitta: "Yes"
       Vata:
-      Kapha:
-  - Lose weight?:
-      Pitta:
-      Vata: "Yes"
       Kapha:
   - Experience constipation or excess gas?:
       Pitta:
@@ -71,10 +63,6 @@ questions:
       Pitta: "Yes"
       Vata:
       Kapha:
-  - Feel lazy or inert?:
-      Pitta:
-      Vata:
-      Kapha: "Yes"
   - Easily lose your temper?:
       Pitta: "Yes"
       Vata:
@@ -103,15 +91,7 @@ questions:
       Pitta: "Yes"
       Vata:
       Kapha:
-  - Feel restless?:
-      Pitta:
-      Vata: "Yes"
-      Kapha:
-  - Sleep a lot?:
-      Pitta:
-      Vata:
-      Kapha: "Yes"
-  - How do you describe your Skin and hair:
-      Pitta: Is your skin sensitive, prone to redness, or acne? Do you have early graying or thinning of hair?
-      Vata: Is your skin dry, rough, or prone to cracking? Is your hair dry or brittle? 
-      Kapha: Is your skin smooth, oily, and soft? Do you have thick, lustrous hair? 
+    - What are your sleep patterns:
+      Pitta: Do you sleep well but prefer cooler environments when resting? 
+      Vata: Do you have trouble falling asleep or wake up frequently during the night? 
+      Kapha: Do you sleep heavily and for long hours, sometimes finding it hard to wake up?
