@@ -17,7 +17,7 @@ questions:
       Kapha: Large, round
   - Which best describes how you talk?:
       Pitta: Do you speak clearly in a concise way and assertively, sometimes with a sharp or direct tone?
-      Vata: Fast and or a lot! Jumping topics.
+      Vata: Fast and or a lot! Jumping topics
       Kapha: My speech is slow, calm and thoughtful
   - What type of weather is your favorite?:
       Pitta: Do you dislike hot weather Do you often feel hot or sweaty, even in mild weather  and prefer cooler temperatures?
@@ -47,42 +47,52 @@ questions:
       Pitta: "Yes"
       Vata:
       Kapha:
+      No Dosha: "No"
   - Experience constipation or excess gas?:
       Pitta:
       Vata: "Yes"
       Kapha:
+      No Dosha: "No"
   - Overeat or lose your appetite?:
       Pitta:
       Vata:
       Kapha: "Yes"
+      No Dosha: "No"
   - Drink alcohol to excess?:
       Pitta: "Yes"
       Vata:
       Kapha:
+      No Dosha: "No"
   - Retain water?:
       Pitta:
       Vata:
       Kapha: "Yes"
+      No Dosha: "No"
   - Seek change?:
       Pitta:
       Vata: "Yes"
       Kapha:
+      No Dosha: "No"
   - Sweat a lot or have excess body odor?:
       Pitta: "Yes"
       Vata:
       Kapha:
+      No Dosha: "No"
   - Feel anxious or fearful?:
       Pitta:
       Vata: "Yes"
       Kapha:
+      No Dosha: "No"
   - Eat hot, spicy foods?:
       Pitta: "Yes"
       Vata:
       Kapha:
+      No Dosha: "No"
   - Experience gastritis or ulcers?:
       Pitta: "Yes"
       Vata:
       Kapha:
+      No Dosha: "No"
   - What are your sleep patterns?:
       Pitta: Do you sleep well but prefer cooler environments when resting?
       Vata: Do you have trouble falling asleep or wake up frequently during the night?

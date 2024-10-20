@@ -83,6 +83,7 @@ with st.form('survey_form'):
                 cat_counts['Pitta'],
                 cat_counts['Vata'],
                 cat_counts['Kapha'],
+                cat_counts['No Dosha'],
                 *answers_with_cat,
             ]
             conn.update(worksheet='Responses', data=df)
