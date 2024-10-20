@@ -1,12 +1,13 @@
 """
 Author: Vaasudevan Srinivsan <vaasuceg.96@gmail.com>
 Created: Oct 10, 2024
-Modified: Oct 19, 2024
+Modified: Oct 20, 2024
 References:
     - https://docs.streamlit.io/develop/tutorials/databases/private-gsheet
 """
 
 from collections import Counter
+from copy import deepcopy
 from datetime import datetime
 
 import altair as alt
@@ -29,12 +30,16 @@ with st.form('survey_form'):
         questions = yaml.safe_load(file)
         total_ques = len(questions['questions'])
 
+    ques_desc = [q.popitem()[0] for q in deepcopy(questions['questions'])]
+    for q in ques_desc:
+        print(q)
+
     responses = {
         'name': st.text_input('Name:red[*]', placeholder='Enter your name'),
         'answers': {},
     }
     answer_keys = {}
-    for ix, ques in enumerate(questions['questions'], start=1):
+    for ix, ques in enumerate(deepcopy(questions['questions']), start=1):
         ques_label, options = ques.popitem()
         answer_keys[ix] = options = {v: k for k, v in options.items() if v is not None}
         responses['answers'][ix] = st.radio(
