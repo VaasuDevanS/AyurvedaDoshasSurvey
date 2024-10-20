@@ -43,11 +43,7 @@ questions:
       Pitta: I can be irritable, impatient prone to anger
       Vata: I’m often restless easily excitable, prone to anxiety 
       Kapha: I’m resistant to change or clingy
-  - Feel complacent?:
-      Pitta:
-      Vata:
-      Kapha: "Yes"
-  - Develop rashes or hives?:
+    - Develop rashes or hives?:
       Pitta: "Yes"
       Vata:
       Kapha:
@@ -63,11 +59,7 @@ questions:
       Pitta: "Yes"
       Vata:
       Kapha:
-  - Easily lose your temper?:
-      Pitta: "Yes"
-      Vata:
-      Kapha:
-  - Retain water?:
+    - Retain water?:
       Pitta:
       Vata:
       Kapha: "Yes"
