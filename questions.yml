@@ -83,10 +83,10 @@ questions:
       Vata: "Yes"
       Kapha:
       No Dosha: "No"
-  - Eat hot, spicy foods?:
-      Pitta: "Yes"
+  - When stressed, do you become withdrawn, lethargic, or resistant to change?:
+      Pitta: 
       Vata:
-      Kapha:
+      Kapha: "Yes"
       No Dosha: "No"
   - Experience gastritis or ulcers?:
       Pitta: "Yes"
@@ -97,7 +97,7 @@ questions:
       Pitta: Do you sleep well but prefer cooler environments when resting?
       Vata: Do you have trouble falling asleep or wake up frequently during the night?
       Kapha: Do you sleep heavily and for long hours, sometimes finding it hard to wake up?
-  - How are your bowel movements?:
+  - How are your bowel movements occasionally?:
       Pitta: Do you tend to have regular, loose, or frequent bowel movements, sometimes with a burning sensation?
       Vata: Do you often have irregular bowel movements, such as constipation or gas?
       Kapha: Do you have slow, regular bowel movements, sometimes experiencing heaviness or sluggishness?
