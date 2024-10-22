@@ -1,7 +1,7 @@
 """
 Author: Vaasudevan Srinivsan <vaasuceg.96@gmail.com>
 Created: Oct 10, 2024
-Modified: Oct 20, 2024
+Modified: Oct 22, 2024
 References:
     - https://docs.streamlit.io/develop/tutorials/databases/private-gsheet
 """
@@ -15,6 +15,8 @@ import pandas as pd
 import streamlit as st
 import yaml
 from streamlit_gsheets import GSheetsConnection
+
+print(pd.__version__)
 
 
 st.set_page_config(page_title='Ayurveda Doshas Survey')
@@ -31,8 +33,8 @@ with st.form('survey_form'):
         total_ques = len(questions['questions'])
 
     ques_desc = [q.popitem()[0] for q in deepcopy(questions['questions'])]
-    for q in ques_desc:
-        print(q)
+    # for q in ques_desc:
+    #     print(q)
 
     responses = {
         'name': st.text_input('Name:red[*]', placeholder='Enter your name'),
