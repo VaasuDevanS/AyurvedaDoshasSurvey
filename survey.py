@@ -1,7 +1,7 @@
 """
 Author: Vaasudevan Srinivsan <vaasuceg.96@gmail.com>
 Created: Oct 10, 2024
-Modified: Oct 22, 2024
+Modified: Oct 24, 2024
 References:
     - https://docs.streamlit.io/develop/tutorials/databases/private-gsheet
 """
@@ -15,8 +15,6 @@ import pandas as pd
 import streamlit as st
 import yaml
 from streamlit_gsheets import GSheetsConnection
-
-print(pd.__version__)
 
 
 st.set_page_config(page_title='Ayurveda Doshas Survey')
@@ -48,63 +46,58 @@ with st.form('survey_form'):
             f'{ix}.) {ques_label}', options.keys(), index=None
         )
 
-    def disable_button():
-        st.session_state.submitted = True
+    # https://discuss.streamlit.io/t/delete-widgets/7596/5
+    placeholder = st.empty()
+    submitted = placeholder.form_submit_button('Submit your response')
 
-    if 'submitted' not in st.session_state:
-        st.session_state.submitted = False
-    submitted = st.form_submit_button(
-        'Submit your response',
-        on_click=disable_button,
-        disabled=st.session_state.submitted,
-    )
+    if submitted and not responses['name']:
+        st.error('Please enter your name')
 
-    if submitted:
-        if not responses['name']:
-            st.error('Please enter your name')
+    if submitted and responses['name']:
+        placeholder.empty()
+        st.form_submit_button('Submitted', disabled=True)
 
-        else:
-            # Stats
-            categories = []
-            answers_with_cat = []
-            for ix, answer in responses['answers'].items():
-                if answer is not None:
-                    categories.append(answer_keys[ix][answer])
-                    answers_with_cat.append(f'{answer} ({categories[-1]})')
-                else:
-                    answers_with_cat.append(None)
-            cat_counts = Counter(categories)
+        # Stats
+        categories = []
+        answers_with_cat = []
+        for ix, answer in responses['answers'].items():
+            if answer is not None:
+                categories.append(answer_keys[ix][answer])
+                answers_with_cat.append(f'{answer} ({categories[-1]})')
+            else:
+                answers_with_cat.append(None)
+        cat_counts = Counter(categories)
 
-            # Save to Google Sheet
-            conn = st.connection('gsheets', type=GSheetsConnection)
-            df = conn.read(worksheet='Responses')
-            df.loc[len(df.index)] = [
-                datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                responses['name'],
-                len(categories),
-                cat_counts['Pitta'],
-                cat_counts['Vata'],
-                cat_counts['Kapha'],
-                cat_counts['No Dosha'],
-                *answers_with_cat,
-            ]
-            conn.update(worksheet='Responses', data=df)
-            st.cache_data.clear()
+        # Save to Google Sheet
+        conn = st.connection('gsheets', type=GSheetsConnection)
+        df = conn.read(worksheet='Responses')
+        df.loc[len(df.index)] = [
+            datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            responses['name'],
+            len(categories),
+            cat_counts['Pitta'],
+            cat_counts['Vata'],
+            cat_counts['Kapha'],
+            cat_counts['No Dosha'],
+            *answers_with_cat,
+        ]
+        conn.update(worksheet='Responses', data=df)
+        st.cache_data.clear()
 
-            st.success(f'Thanks "{responses["name"]}" for completing the survey!')
-            st.write(f'You answered {len(categories)} out of {total_ques} questions')
-            st.write(cat_counts)
+        st.success(f'Thanks "{responses["name"]}" for completing the survey!')
+        st.write(f'You answered {len(categories)} out of {total_ques} questions')
+        st.write(cat_counts)
 
-            cat_counts_df = pd.DataFrame(
-                cat_counts.items(), columns=['Doshas', '#Questions']
+        cat_counts_df = pd.DataFrame(
+            cat_counts.items(), columns=['Doshas', '#Questions']
+        )
+        pie_chart = (
+            alt.Chart(cat_counts_df)
+            .mark_arc()
+            .encode(
+                theta=alt.Theta(field='#Questions', type='quantitative'),
+                color=alt.Color(field='Doshas', type='nominal'),
+                tooltip=['Doshas', '#Questions'],
             )
-            pie_chart = (
-                alt.Chart(cat_counts_df)
-                .mark_arc()
-                .encode(
-                    theta=alt.Theta(field='#Questions', type='quantitative'),
-                    color=alt.Color(field='Doshas', type='nominal'),
-                    tooltip=['Doshas', '#Questions'],
-                )
-            )
-            st.altair_chart(pie_chart, use_container_width=True)
+        )
+        st.altair_chart(pie_chart, use_container_width=True)
