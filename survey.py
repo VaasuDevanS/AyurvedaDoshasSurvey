@@ -1,7 +1,7 @@
 """
 Author: Vaasudevan Srinivsan <vaasuceg.96@gmail.com>
 Created: Oct 10, 2024
-Modified: Oct 24, 2024
+Modified: Nov 03, 2024
 References:
     - https://docs.streamlit.io/develop/tutorials/databases/private-gsheet
 """
@@ -15,7 +15,6 @@ import pandas as pd
 import streamlit as st
 import yaml
 from streamlit_gsheets import GSheetsConnection
-
 
 st.set_page_config(page_title='Ayurveda Doshas Survey')
 
